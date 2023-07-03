@@ -41,6 +41,8 @@ ol {
 
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
@@ -249,13 +251,15 @@ img {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    transition: opacity var(--transition), visibility var(--transition);
+    transition: transform 250ms ease-in-out, opacity var(--transition), visibility var(--transition);
+    transform: translateX(100%);
 }
 
 .mob-menu.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    transform: translateX(0);
 }
 
 .mob-menu-container {
@@ -859,6 +863,10 @@ img {
     .footer-container {
         width: 584px;
     }
+
+    .footer-section-2 {
+        margin-left: 24px;
+    }
 }
 
 .logo-part-bottom {
@@ -868,6 +876,8 @@ img {
 .footer-container {
     display: flex;
 }
+
+
 
 .footer .list-social-links {
     display: flex;
